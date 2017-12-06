@@ -4,13 +4,13 @@
  */
 package io.github.akiranen.report;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-
 import io.github.akiranen.core.ConnectionListener;
 import io.github.akiranen.core.DTNHost;
 import io.github.akiranen.core.UpdateListener;
+
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * The number of contacts during an inter-contact time metric is similar to

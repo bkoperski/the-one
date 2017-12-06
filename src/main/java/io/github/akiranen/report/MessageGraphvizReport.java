@@ -4,12 +4,12 @@
  */
 package io.github.akiranen.report;
 
-import java.util.List;
-import java.util.Vector;
-
 import io.github.akiranen.core.DTNHost;
 import io.github.akiranen.core.Message;
 import io.github.akiranen.core.MessageListener;
+
+import java.util.List;
+import java.util.Vector;
 
 /**
  * Creates a graphviz compatible graph of messages that were passed.

@@ -4,17 +4,12 @@
  */
 package io.github.akiranen.input;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
-import java.io.StringReader;
+import io.github.akiranen.core.Coord;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-import io.github.akiranen.core.Coord;
 
 /**
  * Class for reading "Well-known text syntax" files. See e.g.

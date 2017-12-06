@@ -4,27 +4,20 @@
  */
 package io.github.akiranen.gui;
 
+import io.github.akiranen.core.Settings;
+import io.github.akiranen.core.SettingsError;
 import io.github.akiranen.gui.nodefilter.NodeMessageFilter;
-import io.github.akiranen.gui.playfield.PlayField;
 import io.github.akiranen.gui.playfield.NodeGraphic;
+import io.github.akiranen.gui.playfield.PlayField;
 
-import java.awt.Container;
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
-import javax.imageio.ImageIO;
-import javax.swing.Box;
-import javax.swing.JCheckBoxMenuItem;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-
-import io.github.akiranen.core.Settings;
-import io.github.akiranen.core.SettingsError;
 
 /**
  * Menu bar of the simulator GUI
@@ -98,7 +91,7 @@ public class SimMenuBar extends JMenuBar implements ActionListener {
 					false, null);
 		}
 
-		settings.setNameSpace(gui.MainWindow.GUI_NS);
+		settings.setNameSpace(MainWindow.GUI_NS);
 
 		showNodeName = createCheckItem(pfMenu, "Show node name strings",
 				true, SHOW_NODE_NAMESTR_S);
@@ -152,7 +145,7 @@ public class SimMenuBar extends JMenuBar implements ActionListener {
 	 */
 	private JCheckBoxMenuItem createCheckItem(Container c,String txt,
 			boolean selected, String setting) {
-		Settings s = new Settings(gui.MainWindow.GUI_NS);
+		Settings s = new Settings(MainWindow.GUI_NS);
 
 		JCheckBoxMenuItem i = new JCheckBoxMenuItem(txt);
 		if (setting == null) {

@@ -4,18 +4,17 @@
  */
 package io.github.akiranen.movement;
 
+import io.github.akiranen.core.Coord;
+import io.github.akiranen.core.Settings;
+import io.github.akiranen.core.SimClock;
 import io.github.akiranen.input.WKTReader;
+import io.github.akiranen.movement.map.DijkstraPathFinder;
+import io.github.akiranen.movement.map.MapNode;
+import io.github.akiranen.movement.map.SimMap;
 
 import java.io.File;
 import java.util.LinkedList;
 import java.util.List;
-
-import io.github.akiranen.movement.map.DijkstraPathFinder;
-import io.github.akiranen.movement.map.MapNode;
-import io.github.akiranen.movement.map.SimMap;
-import io.github.akiranen.core.Coord;
-import io.github.akiranen.core.Settings;
-import io.github.akiranen.core.SimClock;
 
 /**
  * A Class to model movement at home. If the node happens to be at some other

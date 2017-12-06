@@ -4,12 +4,11 @@
  */
 package io.github.akiranen.gui.playfield;
 
-import java.awt.Color;
-import java.awt.Graphics2D;
-
+import io.github.akiranen.core.Coord;
 import io.github.akiranen.movement.map.MapNode;
 import io.github.akiranen.movement.map.SimMap;
-import io.github.akiranen.core.Coord;
+
+import java.awt.*;
 
 /**
  * PlayfieldGraphic for SimMap visualization

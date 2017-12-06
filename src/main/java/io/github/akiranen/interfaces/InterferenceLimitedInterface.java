@@ -4,12 +4,12 @@
  */
 package io.github.akiranen.interfaces;
 
-import java.util.Collection;
-
 import io.github.akiranen.core.Connection;
 import io.github.akiranen.core.NetworkInterface;
 import io.github.akiranen.core.Settings;
 import io.github.akiranen.core.VBRConnection;
+
+import java.util.Collection;
 
 /**
  * A simple Network Interface that provides a variable bit-rate service, where

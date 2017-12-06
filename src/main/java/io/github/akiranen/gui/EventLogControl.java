@@ -4,7 +4,7 @@
  */
 package io.github.akiranen.gui;
 
-import javax.swing.JCheckBox;
+import javax.swing.*;
 
 /**
  * Class capsulates the references to the controls one can add to

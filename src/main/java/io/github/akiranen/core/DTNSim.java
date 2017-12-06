@@ -3,13 +3,13 @@
  * Released under GPLv3. See LICENSE.txt for details.
  */
 package io.github.akiranen.core;
+
 import io.github.akiranen.gui.DTNSimGUI;
+import io.github.akiranen.ui.DTNSimTextUI;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
-
-import io.github.akiranen.ui.DTNSimTextUI;
 
 /**
  * Simulator's main class

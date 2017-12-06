@@ -4,14 +4,13 @@
  */
 package io.github.akiranen.movement;
 
-import io.github.akiranen.input.ExternalPathMovementReader;
-
-import java.util.List;
-
 import io.github.akiranen.core.Coord;
 import io.github.akiranen.core.DTNHost;
 import io.github.akiranen.core.Settings;
 import io.github.akiranen.core.SimClock;
+import io.github.akiranen.input.ExternalPathMovementReader;
+
+import java.util.List;
 
 /**
  * External movement trace reader for traces that are in path format.

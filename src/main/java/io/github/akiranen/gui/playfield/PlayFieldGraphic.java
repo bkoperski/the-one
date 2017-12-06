@@ -4,7 +4,7 @@
  */
 package io.github.akiranen.gui.playfield;
 
-import java.awt.Graphics2D;
+import java.awt.*;
 
 /**
  * Superclass for all graphics to be drawn on the "play field".

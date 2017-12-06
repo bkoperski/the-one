@@ -9,23 +9,18 @@ import fi.tkk.netlab.dtn.DTNConsoleConnection;
 import fi.tkk.netlab.dtn.ecla.Bundle;
 import fi.tkk.netlab.dtn.ecla.CLAInterface;
 import fi.tkk.netlab.dtn.ecla.CLAParser;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Queue;
-
 import io.github.akiranen.core.DTN2Manager;
 import io.github.akiranen.core.Debug;
 import io.github.akiranen.core.Settings;
 import io.github.akiranen.core.SimClock;
 
-import static core.Constants.DEBUG;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.*;
+
+import static io.github.akiranen.core.Constants.DEBUG;
 
 /**
  * Delivers bundles from dtnd to ONE. Must be configured as an

@@ -4,16 +4,15 @@
  */
 package io.github.akiranen.input;
 
+import io.github.akiranen.core.Coord;
+import io.github.akiranen.core.SettingsError;
+import io.github.akiranen.util.Tuple;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-import io.github.akiranen.util.Tuple;
-
-import io.github.akiranen.core.Coord;
-import io.github.akiranen.core.SettingsError;
 
 
 /**

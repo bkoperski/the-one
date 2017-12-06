@@ -6,15 +6,14 @@ package io.github.akiranen.core;
 
 import io.github.akiranen.input.EventQueue;
 import io.github.akiranen.input.EventQueueHandler;
-
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-
 import io.github.akiranen.movement.MapBasedMovement;
 import io.github.akiranen.movement.MovementModel;
 import io.github.akiranen.movement.map.SimMap;
 import io.github.akiranen.routing.MessageRouter;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simulation scenario used for getting and storing the settings of a

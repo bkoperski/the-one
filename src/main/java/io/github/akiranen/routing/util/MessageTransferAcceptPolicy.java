@@ -4,17 +4,11 @@
  */
 package io.github.akiranen.routing.util;
 
-import java.util.ArrayList;
-
+import io.github.akiranen.core.*;
 import io.github.akiranen.util.Range;
 import io.github.akiranen.util.Tuple;
 
-import io.github.akiranen.core.ArithmeticCondition;
-import io.github.akiranen.core.Connection;
-import io.github.akiranen.core.DTNHost;
-import io.github.akiranen.core.Message;
-import io.github.akiranen.core.ModuleCommunicationBus;
-import io.github.akiranen.core.Settings;
+import java.util.ArrayList;
 
 /**
  * <P> Message transfer accepting policy module. Can be used to decide whether

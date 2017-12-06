@@ -4,12 +4,12 @@
  */
 package io.github.akiranen.movement;
 
-import java.util.LinkedList;
-import java.util.List;
-
-import io.github.akiranen.movement.map.MapNode;
 import io.github.akiranen.core.Coord;
 import io.github.akiranen.core.Settings;
+import io.github.akiranen.movement.map.MapNode;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * This class controls the movement of busses. It informs the bus control system

@@ -4,12 +4,12 @@
  */
 package io.github.akiranen.report;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-
 import io.github.akiranen.core.ConnectionListener;
 import io.github.akiranen.core.DTNHost;
 import io.github.akiranen.core.SimClock;
+
+import java.util.Iterator;
+import java.util.LinkedList;
 
 /**
  * This report counts the number of contacts each hour

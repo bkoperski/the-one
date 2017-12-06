@@ -4,12 +4,12 @@
  */
 package io.github.akiranen.input;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import io.github.akiranen.core.DTNHost;
 import io.github.akiranen.core.Message;
 import io.github.akiranen.core.World;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * External event for deleting a message.

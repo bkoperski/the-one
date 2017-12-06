@@ -6,14 +6,12 @@ package io.github.akiranen.core;
 
 import io.github.akiranen.interfaces.ConnectivityGrid;
 import io.github.akiranen.interfaces.ConnectivityOptimizer;
+import io.github.akiranen.routing.util.EnergyModel;
+import io.github.akiranen.util.ActivenessHandler;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
-import io.github.akiranen.routing.util.EnergyModel;
-
-import io.github.akiranen.util.ActivenessHandler;
 
 /**
  * Network interface of a DTNHost. Takes care of connectivity among hosts.

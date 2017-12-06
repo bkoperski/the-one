@@ -4,26 +4,20 @@
  */
 package io.github.akiranen.gui;
 
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
+import io.github.akiranen.core.DTNHost;
+import io.github.akiranen.core.Settings;
+import io.github.akiranen.gui.nodefilter.NodeFilter;
+import io.github.akiranen.gui.nodefilter.NodeMessageFilter;
+import io.github.akiranen.gui.playfield.NodeGraphic;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Vector;
-
-import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JPanel;
-import javax.swing.Timer;
-
-import io.github.akiranen.gui.nodefilter.*;
-import io.github.akiranen.gui.playfield.NodeGraphic;
-import io.github.akiranen.core.DTNHost;
-import io.github.akiranen.core.Settings;
 
 /**
  * Node chooser panel

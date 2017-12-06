@@ -4,16 +4,16 @@
  */
 package io.github.akiranen.core;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
 import io.github.akiranen.movement.MovementModel;
 import io.github.akiranen.movement.Path;
 import io.github.akiranen.routing.MessageRouter;
 import io.github.akiranen.routing.util.RoutingInfo;
 
-import static core.Constants.DEBUG;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+import static io.github.akiranen.core.Constants.DEBUG;
 
 /**
  * A DTN capable host.

@@ -4,6 +4,10 @@
  */
 package io.github.akiranen.input;
 
+import io.github.akiranen.core.Coord;
+import io.github.akiranen.movement.map.MapNode;
+import io.github.akiranen.movement.map.SimMap;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -12,10 +16,6 @@ import java.util.Collection;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
-
-import io.github.akiranen.movement.map.MapNode;
-import io.github.akiranen.movement.map.SimMap;
-import io.github.akiranen.core.Coord;
 
 /**
  * "Well-known text syntax" map data reader.<BR>

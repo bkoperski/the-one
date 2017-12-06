@@ -4,13 +4,13 @@
  */
 package io.github.akiranen.routing;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import io.github.akiranen.core.Connection;
 import io.github.akiranen.core.DTNHost;
 import io.github.akiranen.core.Message;
 import io.github.akiranen.core.Settings;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Implementation of Spray and wait router as depicted in

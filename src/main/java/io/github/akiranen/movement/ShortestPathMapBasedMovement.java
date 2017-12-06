@@ -4,12 +4,12 @@
  */
 package io.github.akiranen.movement;
 
-import java.util.List;
-
+import io.github.akiranen.core.Settings;
 import io.github.akiranen.movement.map.DijkstraPathFinder;
 import io.github.akiranen.movement.map.MapNode;
 import io.github.akiranen.movement.map.PointsOfInterest;
-import io.github.akiranen.core.Settings;
+
+import java.util.List;
 
 /**
  * Map based movement model that uses Dijkstra's algorithm to find shortest

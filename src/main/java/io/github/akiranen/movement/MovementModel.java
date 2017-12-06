@@ -4,17 +4,10 @@
  */
 package io.github.akiranen.movement;
 
-import java.util.Random;
-
+import io.github.akiranen.core.*;
 import io.github.akiranen.util.ActivenessHandler;
 
-import io.github.akiranen.core.Coord;
-import io.github.akiranen.core.DTNHost;
-import io.github.akiranen.core.DTNSim;
-import io.github.akiranen.core.ModuleCommunicationBus;
-import io.github.akiranen.core.Settings;
-import io.github.akiranen.core.SimClock;
-import io.github.akiranen.core.SimError;
+import java.util.Random;
 
 /**
  * <P>Superclass for all movement models. All subclasses must contain at least a

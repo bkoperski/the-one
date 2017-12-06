@@ -4,17 +4,16 @@
  */
 package io.github.akiranen.movement;
 
+import io.github.akiranen.core.Coord;
+import io.github.akiranen.core.Settings;
 import io.github.akiranen.input.WKTReader;
+import io.github.akiranen.movement.map.DijkstraPathFinder;
+import io.github.akiranen.movement.map.MapNode;
+import io.github.akiranen.movement.map.SimMap;
 
 import java.io.File;
 import java.util.LinkedList;
 import java.util.List;
-
-import io.github.akiranen.movement.map.DijkstraPathFinder;
-import io.github.akiranen.movement.map.MapNode;
-import io.github.akiranen.movement.map.SimMap;
-import io.github.akiranen.core.Coord;
-import io.github.akiranen.core.Settings;
 
 /**
  * A Class to model movement when people are out shopping or doing other

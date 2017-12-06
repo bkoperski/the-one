@@ -4,13 +4,13 @@
  */
 package io.github.akiranen.report;
 
-import java.util.HashSet;
-import java.util.List;
-
 import io.github.akiranen.core.DTNHost;
 import io.github.akiranen.core.Message;
 import io.github.akiranen.core.Settings;
 import io.github.akiranen.core.UpdateListener;
+
+import java.util.HashSet;
+import java.util.List;
 
 
 /**

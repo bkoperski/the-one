@@ -1,0 +1,62 @@
+/*
+ * Copyright 2010 Aalto University, ComNet
+ * Released under GPLv3. See LICENSE.txt for details.
+ */
+package io.github.akiranen;
+
+import io.github.akiranen.core.Coord;
+import io.github.akiranen.movement.MovementModel;
+import io.github.akiranen.movement.Path;
+
+/**
+ * A dummy stationary "movement" model where nodes do not move for testing
+ * purposes
+ */
+public class DummyStationaryMovement extends MovementModel {
+	private Coord loc;
+
+	public DummyStationaryMovement(Coord location) {
+		if (location == null) {
+			this.loc = new Coord(0,0);
+		}
+		else {
+			this.loc = location;
+		}
+	}
+
+	/**
+	 * Returns the only location of this movement model
+	 * @return the only location of this movement model
+	 */
+	@Override
+	public Coord getInitialLocation() {
+		return loc;
+	}
+
+	@Override
+	public boolean isActive() {
+		return true;
+	}
+
+	/**
+	 * Returns a single coordinate path (using the only possible coordinate)
+	 * @return a single coordinate path
+	 */
+	@Override
+	public Path getPath() {
+		Path p = new Path(0);
+		p.addWaypoint(loc);
+		return p;
+	}
+
+	@Override
+	public double nextPathAvailable() {
+		return Double.MAX_VALUE;	// no new paths available
+	}
+
+	@Override
+	public DummyStationaryMovement replicate() {
+		return new DummyStationaryMovement(loc);
+	}
+
+}

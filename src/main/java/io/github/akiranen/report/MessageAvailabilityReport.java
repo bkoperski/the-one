@@ -4,16 +4,12 @@
  */
 package io.github.akiranen.report;
 
+import io.github.akiranen.core.*;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
-
-import io.github.akiranen.core.Connection;
-import io.github.akiranen.core.DTNHost;
-import io.github.akiranen.core.Message;
-import io.github.akiranen.core.Settings;
-import io.github.akiranen.core.SettingsError;
 
 /**
  * Reports which messages are available (either in the buffer or at one

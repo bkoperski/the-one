@@ -5,16 +5,10 @@
 
 package io.github.akiranen.applications;
 
-import java.util.Random;
-
+import io.github.akiranen.core.*;
 import io.github.akiranen.report.PingAppReporter;
-import io.github.akiranen.core.Application;
-import io.github.akiranen.core.DTNHost;
-import io.github.akiranen.core.Message;
-import io.github.akiranen.core.Settings;
-import io.github.akiranen.core.SimClock;
-import io.github.akiranen.core.SimScenario;
-import io.github.akiranen.core.World;
+
+import java.util.Random;
 
 /**
  * Simple ping application to demonstrate the application support. The

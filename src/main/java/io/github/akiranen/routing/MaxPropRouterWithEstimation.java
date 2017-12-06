@@ -4,25 +4,13 @@
  */
 package io.github.akiranen.routing;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
+import io.github.akiranen.core.*;
 import io.github.akiranen.routing.maxprop.MaxPropDijkstra;
 import io.github.akiranen.routing.maxprop.MeetingProbabilitySet;
 import io.github.akiranen.routing.util.RoutingInfo;
 import io.github.akiranen.util.Tuple;
-import io.github.akiranen.core.Connection;
-import io.github.akiranen.core.DTNHost;
-import io.github.akiranen.core.Message;
-import io.github.akiranen.core.Settings;
-import io.github.akiranen.core.SimClock;
+
+import java.util.*;
 
 /**
  * Implementation of MaxProp router as described in

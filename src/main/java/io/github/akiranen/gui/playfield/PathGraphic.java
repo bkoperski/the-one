@@ -4,12 +4,11 @@
  */
 package io.github.akiranen.gui.playfield;
 
-import java.awt.Color;
-import java.awt.Graphics2D;
-import java.util.List;
-
-import io.github.akiranen.movement.Path;
 import io.github.akiranen.core.Coord;
+import io.github.akiranen.movement.Path;
+
+import java.awt.*;
+import java.util.List;
 
 /**
  * Visualization of a Path

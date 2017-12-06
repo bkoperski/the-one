@@ -4,12 +4,12 @@
  */
 package io.github.akiranen.routing;
 
-import java.util.Vector;
-
+import io.github.akiranen.core.Connection;
 import io.github.akiranen.core.DTNHost;
 import io.github.akiranen.core.Message;
 import io.github.akiranen.core.Settings;
-import io.github.akiranen.core.Connection;
+
+import java.util.Vector;
 
 /**
  * Router module mimicking the game-of-life behavior

@@ -4,12 +4,12 @@
  */
 package io.github.akiranen.report;
 
-import java.util.HashMap;
-import java.util.Vector;
-
 import io.github.akiranen.core.ConnectionListener;
 import io.github.akiranen.core.DTNHost;
 import io.github.akiranen.core.Settings;
+
+import java.util.HashMap;
+import java.util.Vector;
 
 /**
  * Reports the node contact time (i.e., how long they were in the range

@@ -6,8 +6,7 @@ package io.github.akiranen.movement;
 
 import io.github.akiranen.core.Coord;
 import io.github.akiranen.core.Settings;
-import io.github.akiranen.movement.MovementModel;
-import io.github.akiranen.movement.Path;
+import io.github.akiranen.core.SimScenario;
 
 /**
  * Movement model where all nodes move on a line
@@ -64,7 +63,7 @@ public class LinearMovement extends MovementModel {
 		this.endLoc = new Coord(coords[0], coords[1]);
 		this.initLocType = s.getInt(LINEAR_MOVEMENT_NS + INIT_LOC_S);
 		this.targetType = s.getInt(LINEAR_MOVEMENT_NS + TARGET_S);
-		this.nodeCount = s.getInt(core.SimScenario.NROF_HOSTS_S);
+		this.nodeCount = s.getInt(SimScenario.NROF_HOSTS_S);
 
 		this.lastIndex = 0;
 	}

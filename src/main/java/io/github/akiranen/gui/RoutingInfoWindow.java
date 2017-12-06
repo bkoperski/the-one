@@ -4,24 +4,16 @@
  */
 package io.github.akiranen.gui;
 
-import java.awt.BorderLayout;
-import java.awt.Container;
+import io.github.akiranen.core.DTNHost;
+import io.github.akiranen.core.SimClock;
+import io.github.akiranen.routing.util.RoutingInfo;
+
+import javax.swing.*;
+import javax.swing.tree.DefaultMutableTreeNode;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Vector;
-
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTree;
-import javax.swing.Timer;
-import javax.swing.tree.DefaultMutableTreeNode;
-
-import io.github.akiranen.routing.util.RoutingInfo;
-import io.github.akiranen.core.DTNHost;
-import io.github.akiranen.core.SimClock;
 
 /**
  * A window for displaying routing information

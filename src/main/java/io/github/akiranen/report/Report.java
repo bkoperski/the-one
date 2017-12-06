@@ -4,20 +4,16 @@
  */
 package io.github.akiranen.report;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 import io.github.akiranen.core.Settings;
 import io.github.akiranen.core.SimClock;
 import io.github.akiranen.core.SimError;
 import io.github.akiranen.core.SimScenario;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.*;
 
 /**
  * Abstract superclass for all reports. All settings defined in this class

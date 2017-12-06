@@ -6,8 +6,7 @@ package io.github.akiranen.movement;
 
 import io.github.akiranen.core.Coord;
 import io.github.akiranen.core.Settings;
-import io.github.akiranen.movement.MovementModel;
-import io.github.akiranen.movement.Path;
+import io.github.akiranen.core.SimScenario;
 
 /**
  * A stationary "movement" model where nodes do not move but are in linear
@@ -45,7 +44,7 @@ public class LinearFormation extends MovementModel {
 		coords = s.getCsvInts(LINEAR_FORMATION_NS + END_LOCATION_S, 2);
 		this.endLoc = new Coord(coords[0], coords[1]);
 
-		this.nodeCount = s.getInt(core.SimScenario.NROF_HOSTS_S);
+		this.nodeCount = s.getInt(SimScenario.NROF_HOSTS_S);
 		this.lastIndex = 0;
 	}
 

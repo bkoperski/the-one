@@ -5,11 +5,11 @@
 
 package io.github.akiranen.report;
 
+import fi.tkk.netlab.dtn.ecla.CLAParser;
 import io.github.akiranen.core.DTN2Manager;
 import io.github.akiranen.core.DTNHost;
 import io.github.akiranen.core.Message;
 import io.github.akiranen.core.MessageListener;
-import fi.tkk.netlab.dtn.ecla.CLAParser;
 
 /**
  * The DTN2Reporter class is responsible for delivering bundles from

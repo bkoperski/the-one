@@ -4,24 +4,11 @@
  */
 package io.github.akiranen.routing;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
-import io.github.akiranen.core.Application;
-import io.github.akiranen.core.Connection;
-import io.github.akiranen.core.DTNHost;
-import io.github.akiranen.core.Message;
-import io.github.akiranen.core.MessageListener;
-import io.github.akiranen.core.Settings;
-import io.github.akiranen.core.SettingsError;
-import io.github.akiranen.core.SimClock;
-import io.github.akiranen.core.SimError;
+import io.github.akiranen.core.*;
 import io.github.akiranen.routing.util.RoutingInfo;
 import io.github.akiranen.util.Tuple;
+
+import java.util.*;
 
 /**
  * Superclass for message routers.

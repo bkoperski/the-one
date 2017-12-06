@@ -4,24 +4,16 @@
  */
 package io.github.akiranen.gui;
 
-import io.github.akiranen.gui.playfield.PlayField;
-
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseWheelListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.lang.reflect.InvocationTargetException;
-
-import javax.swing.JOptionPane;
-import javax.swing.JScrollPane;
-import javax.swing.SwingUtilities;
-
-import io.github.akiranen.movement.Path;
-import io.github.akiranen.ui.DTNSimUI;
 import io.github.akiranen.core.Coord;
 import io.github.akiranen.core.DTNHost;
 import io.github.akiranen.core.SimClock;
+import io.github.akiranen.gui.playfield.PlayField;
+import io.github.akiranen.movement.Path;
+import io.github.akiranen.ui.DTNSimUI;
+
+import javax.swing.*;
+import java.awt.event.*;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * Graphical User Interface for simulator

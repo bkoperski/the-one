@@ -4,10 +4,10 @@
  */
 package io.github.akiranen.input;
 
+import io.github.akiranen.core.Settings;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import io.github.akiranen.core.Settings;
 
 /**
  * <p>

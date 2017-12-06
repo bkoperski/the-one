@@ -4,20 +4,18 @@
  */
 package io.github.akiranen.movement;
 
+import io.github.akiranen.core.Coord;
+import io.github.akiranen.core.Settings;
+import io.github.akiranen.core.SimClock;
 import io.github.akiranen.input.WKTReader;
+import io.github.akiranen.movement.map.DijkstraPathFinder;
+import io.github.akiranen.movement.map.MapNode;
+import io.github.akiranen.movement.map.SimMap;
+import io.github.akiranen.util.ParetoRNG;
 
 import java.io.File;
 import java.util.LinkedList;
 import java.util.List;
-
-import io.github.akiranen.util.ParetoRNG;
-
-import io.github.akiranen.movement.map.DijkstraPathFinder;
-import io.github.akiranen.movement.map.MapNode;
-import io.github.akiranen.movement.map.SimMap;
-import io.github.akiranen.core.Coord;
-import io.github.akiranen.core.Settings;
-import io.github.akiranen.core.SimClock;
 
 /**
  * This class models movement at an office. If the node happens to be at some

@@ -4,11 +4,11 @@
  */
 package io.github.akiranen.movement.map;
 
-import java.util.List;
-import java.util.Vector;
-
 import io.github.akiranen.core.Coord;
 import io.github.akiranen.core.SettingsError;
+
+import java.util.List;
+import java.util.Vector;
 
 /**
  * A node in a SimMap. Node has a location, 0-n neighbors that it is

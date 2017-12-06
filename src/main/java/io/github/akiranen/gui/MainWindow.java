@@ -4,19 +4,12 @@
  */
 package io.github.akiranen.gui;
 
-import io.github.akiranen.gui.playfield.PlayField;
-
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-
-import javax.swing.BoxLayout;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JSplitPane;
-
 import io.github.akiranen.core.Settings;
 import io.github.akiranen.core.World;
+import io.github.akiranen.gui.playfield.PlayField;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * Main window for the program. Takes care of layouting the main components

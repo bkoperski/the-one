@@ -4,12 +4,12 @@
  */
 package io.github.akiranen.movement.map;
 
+import io.github.akiranen.core.Coord;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-import io.github.akiranen.core.Coord;
 
 /**
  * A simulation map for node movement.

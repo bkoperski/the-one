@@ -4,16 +4,15 @@
  */
 package io.github.akiranen.gui.playfield;
 
-import java.awt.Color;
-import java.awt.Graphics2D;
-import java.awt.geom.Ellipse2D;
-import java.util.ArrayList;
-import java.util.List;
-
 import io.github.akiranen.core.Connection;
 import io.github.akiranen.core.Coord;
 import io.github.akiranen.core.DTNHost;
 import io.github.akiranen.core.NetworkInterface;
+
+import java.awt.*;
+import java.awt.geom.Ellipse2D;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Visualization of a DTN Node

@@ -4,14 +4,14 @@
  */
 package io.github.akiranen.movement;
 
-import java.util.List;
-import java.util.Random;
-
+import io.github.akiranen.core.Coord;
+import io.github.akiranen.core.Settings;
 import io.github.akiranen.movement.map.DijkstraPathFinder;
 import io.github.akiranen.movement.map.MapNode;
 import io.github.akiranen.movement.map.SimMap;
-import io.github.akiranen.core.Coord;
-import io.github.akiranen.core.Settings;
+
+import java.util.List;
+import java.util.Random;
 
 /**
  *

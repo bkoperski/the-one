@@ -4,25 +4,17 @@
  */
 package io.github.akiranen.movement;
 
-import io.github.akiranen.input.WKTMapReader;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-import java.util.Set;
-import java.util.Vector;
-
-import io.github.akiranen.movement.map.MapNode;
-import io.github.akiranen.movement.map.SimMap;
 import io.github.akiranen.core.Coord;
 import io.github.akiranen.core.Settings;
 import io.github.akiranen.core.SettingsError;
 import io.github.akiranen.core.SimError;
+import io.github.akiranen.input.WKTMapReader;
+import io.github.akiranen.movement.map.MapNode;
+import io.github.akiranen.movement.map.SimMap;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.*;
 
 /**
  * Map based movement model which gives out Paths that use the

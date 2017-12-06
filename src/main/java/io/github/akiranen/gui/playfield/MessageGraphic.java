@@ -4,11 +4,9 @@
  */
 package io.github.akiranen.gui.playfield;
 
-import java.awt.Color;
-import java.awt.Graphics2D;
-import java.awt.Polygon;
-
 import io.github.akiranen.core.DTNHost;
+
+import java.awt.*;
 
 /**
  * Visualization of a message

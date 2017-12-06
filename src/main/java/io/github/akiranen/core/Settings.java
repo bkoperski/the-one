@@ -4,17 +4,12 @@
  */
 package io.github.akiranen.core;
 
+import io.github.akiranen.util.Range;
+
 import java.io.*;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Properties;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.Stack;
-
-import io.github.akiranen.util.Range;
+import java.util.*;
 
 /**
  * Interface for simulation settings stored in setting file(s). Settings

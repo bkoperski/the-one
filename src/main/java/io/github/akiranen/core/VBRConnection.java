@@ -69,7 +69,7 @@ public class VBRConnection extends Connection {
 	public void update() {
 		currentspeed =  this.fromInterface.getTransmitSpeed(toInterface);
 		int othspeed =  this.toInterface.getTransmitSpeed(fromInterface);
-		double now = core.SimClock.getTime();
+		double now = SimClock.getTime();
 
 		if (othspeed < currentspeed) {
 			currentspeed = othspeed;

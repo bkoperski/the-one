@@ -4,11 +4,11 @@
  */
 package io.github.akiranen.report;
 
-import java.util.List;
-
 import io.github.akiranen.core.ConnectionListener;
 import io.github.akiranen.core.DTNHost;
 import io.github.akiranen.core.UpdateListener;
+
+import java.util.List;
 
 /**
  * The total- vs. the unique encounters for each node

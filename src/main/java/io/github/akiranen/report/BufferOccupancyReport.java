@@ -18,12 +18,13 @@ package io.github.akiranen.report;
  *
  * @author	teemuk
  */
-import java.util.List;
 
 import io.github.akiranen.core.DTNHost;
 import io.github.akiranen.core.Settings;
 import io.github.akiranen.core.SimClock;
 import io.github.akiranen.core.UpdateListener;
+
+import java.util.List;
 
 public class BufferOccupancyReport extends Report implements UpdateListener {
 

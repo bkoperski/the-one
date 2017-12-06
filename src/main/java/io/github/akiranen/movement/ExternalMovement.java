@@ -4,20 +4,14 @@
  */
 package io.github.akiranen.movement;
 
-import io.github.akiranen.input.ExternalMovementReader;
-
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Queue;
-
-import io.github.akiranen.util.Tuple;
-
 import io.github.akiranen.core.Coord;
 import io.github.akiranen.core.DTNSim;
 import io.github.akiranen.core.Settings;
 import io.github.akiranen.core.SimClock;
+import io.github.akiranen.input.ExternalMovementReader;
+import io.github.akiranen.util.Tuple;
+
+import java.util.*;
 
 /**
  * Movement model that uses external data of node locations.

@@ -4,13 +4,13 @@
  */
 package io.github.akiranen.movement;
 
+import io.github.akiranen.core.Coord;
+import io.github.akiranen.core.DTNSim;
+import io.github.akiranen.movement.map.SimMap;
+
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-
-import io.github.akiranen.movement.map.SimMap;
-import io.github.akiranen.core.Coord;
-import io.github.akiranen.core.DTNSim;
 
 /**
  * This class controls busses and passengers that can use the bus.

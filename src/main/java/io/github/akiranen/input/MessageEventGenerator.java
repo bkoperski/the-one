@@ -4,10 +4,10 @@
  */
 package io.github.akiranen.input;
 
-import java.util.Random;
-
 import io.github.akiranen.core.Settings;
 import io.github.akiranen.core.SettingsError;
+
+import java.util.Random;
 
 /**
  * Message creation -external events generator. Creates uniformly distributed

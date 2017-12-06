@@ -4,12 +4,12 @@
  */
 package io.github.akiranen.report;
 
-import java.util.HashMap;
-
 import io.github.akiranen.core.Coord;
 import io.github.akiranen.core.DTNHost;
 import io.github.akiranen.core.Message;
 import io.github.akiranen.core.MessageListener;
+
+import java.util.HashMap;
 
 /**
  * Report for how far apart the nodes were when the message

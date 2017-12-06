@@ -4,12 +4,12 @@
  */
 package io.github.akiranen.movement;
 
-import java.util.List;
-
-import io.github.akiranen.movement.map.DijkstraPathFinder;
-import io.github.akiranen.movement.map.MapNode;
 import io.github.akiranen.core.Coord;
 import io.github.akiranen.core.Settings;
+import io.github.akiranen.movement.map.DijkstraPathFinder;
+import io.github.akiranen.movement.map.MapNode;
+
+import java.util.List;
 
 /**
  * The CarMovement class representing the car movement submodel

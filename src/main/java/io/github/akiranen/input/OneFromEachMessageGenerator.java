@@ -4,12 +4,12 @@
  */
 package io.github.akiranen.input;
 
+import io.github.akiranen.core.Settings;
+import io.github.akiranen.core.SettingsError;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import io.github.akiranen.core.Settings;
-import io.github.akiranen.core.SettingsError;
 
 /**
  * Message creation -external events generator. Creates one message from

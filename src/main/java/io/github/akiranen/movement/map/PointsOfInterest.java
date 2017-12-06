@@ -4,7 +4,11 @@
  */
 package io.github.akiranen.movement.map;
 
+import io.github.akiranen.core.Coord;
+import io.github.akiranen.core.Settings;
+import io.github.akiranen.core.SettingsError;
 import io.github.akiranen.input.WKTReader;
+import io.github.akiranen.util.Tuple;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,12 +16,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
-
-import io.github.akiranen.util.Tuple;
-
-import io.github.akiranen.core.Coord;
-import io.github.akiranen.core.Settings;
-import io.github.akiranen.core.SettingsError;
 
 /**
  * Handler for points of interest data.

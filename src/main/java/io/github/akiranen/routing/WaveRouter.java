@@ -4,17 +4,12 @@
  */
 package io.github.akiranen.routing;
 
+import io.github.akiranen.core.*;
+import io.github.akiranen.routing.util.RoutingInfo;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-
-import io.github.akiranen.routing.util.RoutingInfo;
-
-import io.github.akiranen.core.Connection;
-import io.github.akiranen.core.DTNHost;
-import io.github.akiranen.core.Message;
-import io.github.akiranen.core.Settings;
-import io.github.akiranen.core.SimClock;
 
 /**
  * Epidemic-like message router making waves of messages.

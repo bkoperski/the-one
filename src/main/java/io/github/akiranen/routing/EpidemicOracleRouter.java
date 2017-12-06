@@ -4,12 +4,12 @@
  */
 package io.github.akiranen.routing;
 
+import io.github.akiranen.core.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.akiranen.core.*;
-
-import static core.Constants.DEBUG;
+import static io.github.akiranen.core.Constants.DEBUG;
 
 /**
  * <P>
@@ -150,7 +150,7 @@ public class EpidemicOracleRouter extends ActiveRouter {
 		Message m = con.getMessage();
 
 		if (m == null) {
-			if (DEBUG) core.Debug.p("Null message for con " + con);
+			if (DEBUG) Debug.p("Null message for con " + con);
 			return;
 		}
 

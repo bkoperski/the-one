@@ -4,19 +4,15 @@
  */
 package io.github.akiranen.gui;
 
+import io.github.akiranen.core.DTNHost;
+import io.github.akiranen.core.Message;
+import io.github.akiranen.movement.Path;
+
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Collections;
 import java.util.Vector;
-
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
-import io.github.akiranen.movement.Path;
-import io.github.akiranen.core.DTNHost;
-import io.github.akiranen.core.Message;
 
 /**
  * Information panel that shows data of selected messages and nodes.

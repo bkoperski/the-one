@@ -4,23 +4,11 @@
  */
 package io.github.akiranen.routing;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
+import io.github.akiranen.core.*;
 import io.github.akiranen.routing.util.RoutingInfo;
-
 import io.github.akiranen.util.Tuple;
 
-import io.github.akiranen.core.Connection;
-import io.github.akiranen.core.DTNHost;
-import io.github.akiranen.core.Message;
-import io.github.akiranen.core.Settings;
-import io.github.akiranen.core.SimClock;
+import java.util.*;
 
 /**
  * Implementation of PRoPHET router as described in

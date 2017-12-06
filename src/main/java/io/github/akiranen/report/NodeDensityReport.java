@@ -1,10 +1,6 @@
 package io.github.akiranen.report;
 
-import io.github.akiranen.core.Coord;
-import io.github.akiranen.core.DTNHost;
-import io.github.akiranen.core.Settings;
-import io.github.akiranen.core.SettingsError;
-import io.github.akiranen.core.SimScenario;
+import io.github.akiranen.core.*;
 
 import java.util.ArrayList;
 import java.util.List;

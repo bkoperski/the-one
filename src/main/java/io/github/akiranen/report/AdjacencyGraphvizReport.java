@@ -4,11 +4,11 @@
  */
 package io.github.akiranen.report;
 
-import java.util.Collection;
-import java.util.HashMap;
-
 import io.github.akiranen.core.ConnectionListener;
 import io.github.akiranen.core.DTNHost;
+
+import java.util.Collection;
+import java.util.HashMap;
 
 /**
  * Generates Graphviz compatible graph from connections.

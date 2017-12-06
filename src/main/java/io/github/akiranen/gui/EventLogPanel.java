@@ -4,27 +4,13 @@
  */
 package io.github.akiranen.gui;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.GridLayout;
-import java.awt.Insets;
+import io.github.akiranen.core.*;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Vector;
-
-import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.Timer;
-
-import io.github.akiranen.core.ConnectionListener;
-import io.github.akiranen.core.DTNHost;
-import io.github.akiranen.core.Message;
-import io.github.akiranen.core.MessageListener;
-import io.github.akiranen.core.Settings;
-import io.github.akiranen.core.SimClock;
 
 /**
  * Event log panel where log entries are displayed.

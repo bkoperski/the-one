@@ -4,9 +4,10 @@
  */
 package io.github.akiranen.routing.util;
 
-import java.util.Random;
-
 import io.github.akiranen.core.*;
+import io.github.akiranen.report.Report;
+
+import java.util.Random;
 
 /**
  * Energy model for routing modules. Handles power use from scanning (device
@@ -79,8 +80,8 @@ public class EnergyModel implements ModuleCommunicationListener {
 		if (s.contains(WARMUP_S)) {
 			this.warmupTime = s.getInt(WARMUP_S);
 			if (this.warmupTime == -1) {
-				this.warmupTime = new Settings(report.Report.REPORT_NS).
-					getInt(report.Report.WARMUP_S);
+				this.warmupTime = new Settings(Report.REPORT_NS).
+					getInt(Report.WARMUP_S);
 			}
 		}
 		else {

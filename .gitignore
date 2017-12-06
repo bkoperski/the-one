@@ -19,3 +19,6 @@ doc/package-list
 # JetBrains Intellij files
 .idea
 *.iml
+
+# Gradle files
+gradle

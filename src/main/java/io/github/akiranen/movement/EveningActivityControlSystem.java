@@ -4,12 +4,12 @@
  */
 package io.github.akiranen.movement;
 
+import io.github.akiranen.core.Coord;
+import io.github.akiranen.core.DTNSim;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
-
-import io.github.akiranen.core.Coord;
-import io.github.akiranen.core.DTNSim;
 
 /**
  * This class controls the group mobility of the people meeting their friends in

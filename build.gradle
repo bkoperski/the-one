@@ -1,4 +1,11 @@
-plugins {
-    'java'
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.junit:junit:4.12'
+    testCompile 'org.junit:junit:4.12'
 }
 

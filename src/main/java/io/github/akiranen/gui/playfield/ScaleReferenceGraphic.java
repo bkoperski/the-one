@@ -4,9 +4,7 @@
  */
 package io.github.akiranen.gui.playfield;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics2D;
+import java.awt.*;
 
 /**
  * Reference scale bar graphic. This is the small reference scale

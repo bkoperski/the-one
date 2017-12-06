@@ -4,10 +4,10 @@
  */
 package io.github.akiranen.report;
 
-import java.util.List;
-
 import io.github.akiranen.core.DTNHost;
 import io.github.akiranen.core.UpdateListener;
+
+import java.util.List;
 
 /**
  * Report for total amount of contact times among hosts. Reports how long all

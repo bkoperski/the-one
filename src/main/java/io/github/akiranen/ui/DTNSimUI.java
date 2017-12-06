@@ -4,20 +4,11 @@
  */
 package io.github.akiranen.ui;
 
-import java.util.Vector;
-
+import io.github.akiranen.core.*;
+import io.github.akiranen.movement.MovementModel;
 import io.github.akiranen.report.Report;
-import io.github.akiranen.core.ApplicationListener;
-import io.github.akiranen.core.ConnectionListener;
-import io.github.akiranen.core.MessageListener;
-import io.github.akiranen.core.MovementListener;
-import io.github.akiranen.core.Settings;
-import io.github.akiranen.core.SettingsError;
-import io.github.akiranen.core.SimClock;
-import io.github.akiranen.core.SimError;
-import io.github.akiranen.core.SimScenario;
-import io.github.akiranen.core.UpdateListener;
-import io.github.akiranen.core.World;
+
+import java.util.Vector;
 
 /**
  * Abstract superclass for user interfaces; contains also some simulation
@@ -41,7 +32,7 @@ public abstract class DTNSimUI {
 	 * before starting the real simulation.
 	 */
 	public static final String MM_WARMUP_S =
-		movement.MovementModel.MOVEMENT_MODEL_NS + ".warmup";
+		MovementModel.MOVEMENT_MODEL_NS + ".warmup";
 
 	/** report class' package name */
 	private static final String REPORT_PAC = "report.";

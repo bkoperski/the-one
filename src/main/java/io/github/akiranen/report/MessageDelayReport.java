@@ -4,12 +4,12 @@
  */
 package io.github.akiranen.report;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import io.github.akiranen.core.DTNHost;
 import io.github.akiranen.core.Message;
 import io.github.akiranen.core.MessageListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Reports delivered messages' delays (one line per delivered message)

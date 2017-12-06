@@ -4,18 +4,12 @@
  */
 package io.github.akiranen.interfaces;
 
+import io.github.akiranen.core.*;
+import io.github.akiranen.movement.MovementModel;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-
-import io.github.akiranen.movement.MovementModel;
-
-import io.github.akiranen.core.Coord;
-import io.github.akiranen.core.DTNSim;
-import io.github.akiranen.core.NetworkInterface;
-import io.github.akiranen.core.Settings;
-import io.github.akiranen.core.SettingsError;
-import io.github.akiranen.core.World;
 
 /**
  * <P>

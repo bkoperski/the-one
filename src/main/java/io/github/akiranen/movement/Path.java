@@ -4,10 +4,10 @@
  */
 package io.github.akiranen.movement;
 
+import io.github.akiranen.core.Coord;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import io.github.akiranen.core.Coord;
 
 /**
  * A Path between multiple Coordinates.

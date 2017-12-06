@@ -4,15 +4,14 @@
  */
 package io.github.akiranen.movement.map;
 
+import io.github.akiranen.core.Coord;
+import io.github.akiranen.core.SettingsError;
 import io.github.akiranen.input.WKTReader;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import io.github.akiranen.core.Coord;
-import io.github.akiranen.core.SettingsError;
 
 /**
  * A route that consists of map nodes. There can be different kind of routes

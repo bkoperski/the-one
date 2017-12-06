@@ -4,9 +4,9 @@
  */
 package io.github.akiranen.interfaces;
 
-import java.util.Collection;
-
 import io.github.akiranen.core.NetworkInterface;
+
+import java.util.Collection;
 
 /**
  * A superclass for schemes for optimizing the location of possible contacts

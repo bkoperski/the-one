@@ -4,12 +4,12 @@
  */
 package io.github.akiranen.interfaces;
 
-import java.util.Collection;
-
 import io.github.akiranen.core.CBRConnection;
 import io.github.akiranen.core.Connection;
 import io.github.akiranen.core.NetworkInterface;
 import io.github.akiranen.core.Settings;
+
+import java.util.Collection;
 
 /**
  * A simple Network Interface that provides a constant bit-rate service, where

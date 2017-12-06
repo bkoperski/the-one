@@ -4,13 +4,14 @@
  */
 package io.github.akiranen.routing.maxprop;
 
+import io.github.akiranen.core.Debug;
+import io.github.akiranen.core.SimClock;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import io.github.akiranen.core.SimClock;
-
-import static core.Constants.DEBUG;
+import static io.github.akiranen.core.Constants.DEBUG;
 
 /**
  * Class for storing and manipulating the meeting probabilities for the MaxProp
@@ -100,7 +101,7 @@ public class MeetingProbabilitySet {
 		}
 
         if (probs.size() >= maxSetSize) {
-            if (DEBUG) core.Debug.p("Probsize: " + probs.size() + " dropping " +
+            if (DEBUG) Debug.p("Probsize: " + probs.size() + " dropping " +
 					probs.remove(smallestEntry.getKey()));
         }
 	}

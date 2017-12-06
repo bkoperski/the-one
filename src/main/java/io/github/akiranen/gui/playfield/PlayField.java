@@ -4,12 +4,15 @@
  */
 package io.github.akiranen.gui.playfield;
 
+import io.github.akiranen.core.Coord;
+import io.github.akiranen.core.DTNHost;
+import io.github.akiranen.core.World;
 import io.github.akiranen.gui.DTNSimGUI;
+import io.github.akiranen.movement.Path;
+import io.github.akiranen.movement.map.SimMap;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.geom.AffineTransform;
@@ -17,14 +20,6 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import javax.swing.JPanel;
-
-import io.github.akiranen.movement.Path;
-import io.github.akiranen.movement.map.SimMap;
-import io.github.akiranen.core.Coord;
-import io.github.akiranen.core.DTNHost;
-import io.github.akiranen.core.World;
 
 /**
  * The canvas where node graphics and message visualizations are drawn.

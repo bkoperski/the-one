@@ -4,12 +4,12 @@
  */
 package io.github.akiranen.util;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 import io.github.akiranen.core.Settings;
 import io.github.akiranen.core.SettingsError;
 import io.github.akiranen.core.SimClock;
+
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Object of this class tell the models when a node belonging

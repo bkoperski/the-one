@@ -42,7 +42,7 @@ public class EventQueueHandler  {
 	 * ({@value}) */
 	public static final String CLASS_SETTING = "class";
 	/** name of the package where event generator classes are looked from */
-	public static final String CLASS_PACKAGE = "input";
+	public static final String CLASS_PACKAGE = "io.github.akiranen.input";
 
 	/** number of events to preload from file -setting id ({@value})*/
 	public static final String PRELOAD_SETTING = "nrofPreload";

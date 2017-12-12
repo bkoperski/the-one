@@ -1,11 +1,29 @@
 apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "io.github.akiranen.core.DTNSim"
+applicationDefaultJvmArgs = ['-Duser.country=US', '-Duser.language=en']
+
+distZip {
+    into(project.name) {
+        from '.'
+        include 'data/**'
+        include 'ee/**'
+        include 'toolkit/**'
+        include 'wdm_settings/**'
+    }
+}
 
 repositories {
     mavenCentral()
+    flatDir {
+        dirs 'lib'
+    }
 }
 
 dependencies {
-    compile 'org.junit:junit:4.12'
-    testCompile 'org.junit:junit:4.12'
+    compile name: 'DTNConsoleConnection'
+    compile name: 'ECLA'
+    testCompile 'junit:junit:4.12'
 }
 

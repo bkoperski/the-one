@@ -13,6 +13,7 @@ import io.github.akiranen.input.WKTMapReader;
 import io.github.akiranen.movement.map.MapNode;
 import io.github.akiranen.movement.map.SimMap;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.File;
@@ -94,6 +95,7 @@ public class MapBasedMovementTest {
 		}
 	}
 
+	@Ignore
     @Test
 	public void testOneMapTypeNode() {
 		int NROF = 10;
@@ -133,6 +135,7 @@ public class MapBasedMovementTest {
 		}
 	}
 
+	@Ignore
     @Test
 	public void testManyMapTypeNodes() {
 		setupMapData("1,2",null,null);

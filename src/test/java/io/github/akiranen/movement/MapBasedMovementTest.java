@@ -48,7 +48,7 @@ public class MapBasedMovementTest {
 	private DummySettings s;
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 		s = new DummySettings();
 	}
 
@@ -58,7 +58,7 @@ public class MapBasedMovementTest {
 
 		WKTMapReader reader = new WKTMapReader(true);
 		try {
-			reader.addPaths(input, 0);
+			reader.addPaths(input, 1);
 		} catch (IOException e) {
 			fail(e.toString());
 		}
@@ -89,7 +89,7 @@ public class MapBasedMovementTest {
 		while (path.hasNext()) {
 			c2 = path.getNextWaypoint();
 			// adjacent nodes are always 1 meter apart (in the test topology)
-			assertEquals(1.0, c.distance(c2));
+			assertEquals(1.0, c.distance(c2), 0.001);
 			c = c2;
 		}
 	}
@@ -171,7 +171,7 @@ public class MapBasedMovementTest {
 	 */
     @Test
 	public void testMapCache() throws IOException {
-		String mmbClass = "movement.MapBasedMovement";
+		String mmbClass = "io.github.akiranen.movement.MapBasedMovement";
 		writeToNewFile();
 		assertEquals("1", new DummySettings(MapBasedMovement.MAP_BASE_MOVEMENT_NS).getSetting(MapBasedMovement.NROF_FILES_S));
 		mbm = (MapBasedMovement)s.createIntializedObject(mmbClass);
@@ -207,7 +207,7 @@ public class MapBasedMovementTest {
 		for (int i=0; i<NROF; i++) {
 			h1.move(1);
 			// should always be 1 meter a way from the previous place
-			assertEquals(1.0, loc.distance(h1.getLocation()));
+			assertEquals(1.0, loc.distance(h1.getLocation()), 0.001);
 			loc = h1.getLocation().clone();
 		}
 
@@ -233,7 +233,6 @@ public class MapBasedMovementTest {
 		}
 	}
 
-    @Test
 	private DTNHost setupHost() {
 		TestUtils utils = new TestUtils(null, null, s);
 		DTNHost h1 = utils.createHost(mbm, null);

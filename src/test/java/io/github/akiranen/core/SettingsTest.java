@@ -65,7 +65,7 @@ public class SettingsTest {
     }
 
     @After
-    protected void tearDown() throws Exception {
+    public void tearDown() {
         Settings.setRunIndex(0);
     }
 
@@ -83,7 +83,7 @@ public class SettingsTest {
 
     @Test
     public void testGetDouble() {
-        assertEquals(1.1, s.getDouble("double"));
+        assertEquals(1.1, s.getDouble("double"), 0.001);
     }
 
     @Test
@@ -99,18 +99,18 @@ public class SettingsTest {
     public void testGetCsvDoubles() {
         double[] csv = s.getCsvDoubles("csvDoubles", 3);
         assertEquals(csv.length, 3);
-        assertEquals(1.1, csv[0]);
-        assertEquals(2.2, csv[1]);
-        assertEquals(3.3, csv[2]);
+        assertEquals(1.1, csv[0], 0.001);
+        assertEquals(2.2, csv[1], 0.001);
+        assertEquals(3.3, csv[2], 0.001);
     }
 
     @Test
     public void testGetCsvDoublesUnknownAmount() {
         double[] csv = s.getCsvDoubles("csvDoubles");
         assertEquals(csv.length, 3);
-        assertEquals(1.1, csv[0]);
-        assertEquals(2.2, csv[1]);
-        assertEquals(3.3, csv[2]);
+        assertEquals(1.1, csv[0], 0.001);
+        assertEquals(2.2, csv[1], 0.001);
+        assertEquals(3.3, csv[2], 0.001);
     }
 
     @Test
@@ -144,7 +144,7 @@ public class SettingsTest {
 
     @Test
     public void testCreateIntializedObject() {
-        Object o = s.createIntializedObject("movement.RandomWaypoint");
+        Object o = s.createIntializedObject("io.github.akiranen.movement.RandomWaypoint");
         assertTrue(o instanceof RandomWaypoint);
     }
 

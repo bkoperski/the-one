@@ -26,7 +26,7 @@ public class ScheduledUpdatesQueueTest {
 
     @Test
     public void testUpdates() {
-        assertEquals(MAX, suq.nextEventsTime());
+        assertEquals(MAX, suq.nextEventsTime(), 0.001);
         suq.addUpdate(1);
         suq.addUpdate(1.5);
         suq.addUpdate(20);
@@ -34,20 +34,20 @@ public class ScheduledUpdatesQueueTest {
         suq.addUpdate(0);
         suq.addUpdate(5.3);
 
-        assertEquals(0.0, suq.nextEventsTime());
-        assertEquals(0.0, suq.nextEvent().getTime());
+        assertEquals(0.0, suq.nextEventsTime(), 0.001);
+        assertEquals(0.0, suq.nextEvent().getTime(), 0.001);
 
-        assertEquals(1.0, suq.nextEventsTime());
-        assertEquals(1.0, suq.nextEventsTime()); // twice the same request
-        assertEquals(1.0, suq.nextEvent().getTime());
+        assertEquals(1.0, suq.nextEventsTime(), 0.001);
+        assertEquals(1.0, suq.nextEventsTime(), 0.001); // twice the same request
+        assertEquals(1.0, suq.nextEvent().getTime(), 0.001);
 
-        assertEquals(1.5, suq.nextEvent().getTime());
-        assertEquals(3.0, suq.nextEvent().getTime());
-        assertEquals(5.3, suq.nextEvent().getTime());
-        assertEquals(20.0, suq.nextEvent().getTime());
+        assertEquals(1.5, suq.nextEvent().getTime(), 0.001);
+        assertEquals(3.0, suq.nextEvent().getTime(), 0.001);
+        assertEquals(5.3, suq.nextEvent().getTime(), 0.001);
+        assertEquals(20.0, suq.nextEvent().getTime(), 0.001);
 
-        assertEquals(MAX, suq.nextEventsTime());
-        assertEquals(MAX, suq.nextEvent().getTime());
+        assertEquals(MAX, suq.nextEventsTime(), 0.001);
+        assertEquals(MAX, suq.nextEvent().getTime(), 0.001);
     }
 
     @Test
@@ -57,25 +57,25 @@ public class ScheduledUpdatesQueueTest {
         suq.addUpdate(9);
 
         sc.setTime(1.0);
-        assertEquals(4.0, suq.nextEvent().getTime());
+        assertEquals(4.0, suq.nextEvent().getTime(), 0.001);
 
         suq.addUpdate(8.5);
 
         suq.addUpdate(3); // to the top
-        assertEquals(3.0, suq.nextEvent().getTime());
+        assertEquals(3.0, suq.nextEvent().getTime(), 0.001);
 
         suq.addUpdate(10); // to the bottom
         sc.setTime(4.0);
-        assertEquals(7.0, suq.nextEvent().getTime());
+        assertEquals(7.0, suq.nextEvent().getTime(), 0.001);
 
         sc.setTime(7.5);
-        assertEquals(8.5, suq.nextEvent().getTime());
+        assertEquals(8.5, suq.nextEvent().getTime(), 0.001);
         sc.setTime(8.8);
-        assertEquals(9.0, suq.nextEvent().getTime());
+        assertEquals(9.0, suq.nextEvent().getTime(), 0.001);
         sc.setTime(9.8);
-        assertEquals(10.0, suq.nextEvent().getTime());
+        assertEquals(10.0, suq.nextEvent().getTime(), 0.001);
         sc.setTime(15);
-        assertEquals(MAX, suq.nextEvent().getTime());
+        assertEquals(MAX, suq.nextEvent().getTime(), 0.001);
     }
 
     @Test
@@ -89,13 +89,13 @@ public class ScheduledUpdatesQueueTest {
 
         sc.setTime(-5);
 
-        assertEquals(-4.0, suq.nextEvent().getTime());
-        assertEquals(-2.1, suq.nextEvent().getTime());
-        assertEquals(0.0, suq.nextEvent().getTime());
-        assertEquals(0.1, suq.nextEvent().getTime());
-        assertEquals(3.2, suq.nextEvent().getTime());
-        assertEquals(15.0, suq.nextEvent().getTime());
-        assertEquals(MAX, suq.nextEvent().getTime());
+        assertEquals(-4.0, suq.nextEvent().getTime(), 0.001);
+        assertEquals(-2.1, suq.nextEvent().getTime(), 0.001);
+        assertEquals(0.0, suq.nextEvent().getTime(), 0.001);
+        assertEquals(0.1, suq.nextEvent().getTime(), 0.001);
+        assertEquals(3.2, suq.nextEvent().getTime(), 0.001);
+        assertEquals(15.0, suq.nextEvent().getTime(), 0.001);
+        assertEquals(MAX, suq.nextEvent().getTime(), 0.001);
     }
 
     @Test
@@ -108,9 +108,9 @@ public class ScheduledUpdatesQueueTest {
         suq.addUpdate(1.0);
         suq.addUpdate(8.0);
 
-        assertEquals(1.0, suq.nextEvent().getTime());
-        assertEquals(4.0, suq.nextEvent().getTime());
-        assertEquals(5.0, suq.nextEvent().getTime());
-        assertEquals(8.0, suq.nextEvent().getTime());
+        assertEquals(1.0, suq.nextEvent().getTime(), 0.001);
+        assertEquals(4.0, suq.nextEvent().getTime(), 0.001);
+        assertEquals(5.0, suq.nextEvent().getTime(), 0.001);
+        assertEquals(8.0, suq.nextEvent().getTime(), 0.001);
     }
 }

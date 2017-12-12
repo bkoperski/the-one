@@ -46,7 +46,7 @@ public class WKTReaderTest {
 	private WKTMapReader setUpWith(Reader input) {
 		reader = new WKTMapReader(true);
 		try {
-			reader.addPaths(input, 0);
+			reader.addPaths(input, 1);
 		} catch (IOException e) {
 			fail(e.toString());
 		}
@@ -157,19 +157,19 @@ public class WKTReaderTest {
 		Coord max = map.getMaxBound();
 		Coord min = map.getMinBound();
 
-		assertEquals(2.0, max.getX());
-		assertEquals(5.0, max.getY());
-		assertEquals(1.0, min.getX());
-		assertEquals(1.0, min.getY());
+		assertEquals(2.0, max.getX(), 0.001);
+		assertEquals(5.0, max.getY(), 0.001);
+		assertEquals(1.0, min.getX(), 0.001);
+		assertEquals(1.0, min.getY(), 0.001);
 
 		map.translate(-1, -1);
 		max = map.getMaxBound();
 		min = map.getMinBound();
 
-		assertEquals(1.0, max.getX());
-		assertEquals(4.0, max.getY());
-		assertEquals(0.0, min.getX());
-		assertEquals(0.0, min.getY());
+		assertEquals(1.0, max.getX(), 0.001);
+		assertEquals(4.0, max.getY(), 0.001);
+		assertEquals(0.0, min.getX(), 0.001);
+		assertEquals(0.0, min.getY(), 0.001);
 
 	}
 

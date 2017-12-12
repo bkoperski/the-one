@@ -35,7 +35,7 @@ public abstract class DTNSimUI {
 		MovementModel.MOVEMENT_MODEL_NS + ".warmup";
 
 	/** report class' package name */
-	private static final String REPORT_PAC = "report.";
+	private static final String REPORT_PAC = "io.github.akiranen.report.";
 
 	/** The World where all actors of the simulator are */
 	protected World world;

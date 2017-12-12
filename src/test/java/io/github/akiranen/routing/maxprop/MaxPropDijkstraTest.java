@@ -8,6 +8,7 @@ import io.github.akiranen.TestUtils;
 import io.github.akiranen.core.DTNHost;
 import io.github.akiranen.core.DummySettings;
 import io.github.akiranen.core.NetworkInterface;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.*;
@@ -29,13 +30,14 @@ public class MaxPropDijkstraTest {
 	private MaxPropDijkstra mpd;
 	private Set<Integer> targets;
 
+	@Before
 	public void setUp() {
 		NetworkInterface.reset();
 		DTNHost.reset();
 		TestUtils tu = new TestUtils(null, null, new DummySettings());
-		msets = new ArrayList<MeetingProbabilitySet>();
-		mapping = new HashMap<Integer, MeetingProbabilitySet>();
-		hostsSet = new HashSet<DTNHost>();
+		msets = new ArrayList<>();
+		mapping = new HashMap<>();
+		hostsSet = new HashSet<>();
 
 		for (int i=0; i<NROF_HOSTS; i++) {
 			DTNHost host = tu.createHost();
@@ -47,7 +49,7 @@ public class MaxPropDijkstraTest {
 		}
 
 		mpd = new MaxPropDijkstra(mapping);
-		targets = new HashSet<Integer>();
+		targets = new HashSet<>();
 	}
 
 	/**
@@ -55,7 +57,7 @@ public class MaxPropDijkstraTest {
 	 */
 	@Test
 	public void testProbabilityValuesFromThePaper() {
-		List<Integer> nodes = new ArrayList<Integer>();
+		List<Integer> nodes = new ArrayList<>();
 		nodes.add(1);
 		nodes.add(2);
 		nodes.add(3);
@@ -63,13 +65,13 @@ public class MaxPropDijkstraTest {
 		double unknownProb = 1.0/nodes.size();
 
 		MeetingProbabilitySet mps = new MeetingProbabilitySet(1.0,nodes);
-		assertEquals(unknownProb, mps.getProbFor(1));
-		assertEquals(unknownProb, mps.getProbFor(2));
+		assertEquals(unknownProb, mps.getProbFor(1), 0.001);
+		assertEquals(unknownProb, mps.getProbFor(2), 0.001);
 
 		mps.updateMeetingProbFor(1); // h0 meets h1
 
-		assertEquals(0.625, mps.getProbFor(1));
-		assertEquals(0.125, mps.getProbFor(2));
+		assertEquals(0.625, mps.getProbFor(1), 0.001);
+		assertEquals(0.125, mps.getProbFor(2), 0.001);
 	}
 
 	@Test
@@ -84,42 +86,42 @@ public class MaxPropDijkstraTest {
 		MeetingProbabilitySet mps1 = mapping.get(1);
 
 		mps1.updateMeetingProbFor(2); // h1 meets h2
-		assertEquals(1.0, mps1.getProbFor(2));
+		assertEquals(1.0, mps1.getProbFor(2), 0.001);
 
 		mps1.updateMeetingProbFor(3); // h1 meets h3
-		assertEquals(0.5, mps1.getProbFor(2));
-		assertEquals(0.5, mps1.getProbFor(3));
+		assertEquals(0.5, mps1.getProbFor(2), 0.001);
+		assertEquals(0.5, mps1.getProbFor(3), 0.001);
 
 		/* h4 meets h5 and h6 */
 		mapping.get(4).updateMeetingProbFor(5);
 		mapping.get(4).updateMeetingProbFor(6);
 
 		mps1.updateMeetingProbFor(4); // h1 meets h4
-		assertEquals(0.25, mps1.getProbFor(2));
-		assertEquals(0.25, mps1.getProbFor(3));
-		assertEquals(0.5, mps1.getProbFor(4));
+		assertEquals(0.25, mps1.getProbFor(2), 0.001);
+		assertEquals(0.25, mps1.getProbFor(3), 0.001);
+		assertEquals(0.5, mps1.getProbFor(4), 0.001);
 
 		mps0.updateMeetingProbFor(1); // h0 meets h1
 		mps1.updateMeetingProbFor(0); // and vice versa
-		assertEquals(1.0, mps0.getProbFor(1));
-		assertEquals(0.5, mps1.getProbFor(0));
-		assertEquals(0.125, mps1.getProbFor(2));
-		assertEquals(0.125, mps1.getProbFor(3));
-		assertEquals(0.25, mps1.getProbFor(4));
+		assertEquals(1.0, mps0.getProbFor(1), 0.001);
+		assertEquals(0.5, mps1.getProbFor(0), 0.001);
+		assertEquals(0.125, mps1.getProbFor(2), 0.001);
+		assertEquals(0.125, mps1.getProbFor(3), 0.001);
+		assertEquals(0.25, mps1.getProbFor(4), 0.001);
 
 		mps1.updateMeetingProbFor(4); // h1 meets h4 again
-		assertEquals(1.0, mps0.getProbFor(1)); // should stay the same
-		assertEquals(0.25, mps1.getProbFor(0));
-		assertEquals(0.0625, mps1.getProbFor(2));
-		assertEquals(0.0625, mps1.getProbFor(3));
-		assertEquals(0.625, mps1.getProbFor(4));
+		assertEquals(1.0, mps0.getProbFor(1), 0.001); // should stay the same
+		assertEquals(0.25, mps1.getProbFor(0), 0.001);
+		assertEquals(0.0625, mps1.getProbFor(2), 0.001);
+		assertEquals(0.0625, mps1.getProbFor(3), 0.001);
+		assertEquals(0.625, mps1.getProbFor(4), 0.001);
 
 		Map<Integer, Double> result = mpd.getCosts(0, targets);
 
-		assertEquals(0.0, result.get(1).doubleValue());
-		assertEquals(1-0.0625, result.get(2).doubleValue());
-		assertEquals(1-0.625, result.get(4).doubleValue());
-		assertEquals( (1-0.625)+(1-0.5), result.get(5).doubleValue());
+		assertEquals(0.0, result.get(1), 0.001);
+		assertEquals(1-0.0625, result.get(2), 0.001);
+		assertEquals(1-0.625, result.get(4), 0.001);
+		assertEquals( (1-0.625)+(1-0.5), result.get(5), 0.001);
 	}
 
 	@Test

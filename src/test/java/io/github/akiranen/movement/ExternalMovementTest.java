@@ -71,7 +71,7 @@ public class ExternalMovementTest {
 				ExternalMovement.MOVEMENT_FILE_S, outFile.getAbsolutePath());
 
 		MovementModel emProto = (MovementModel)
-			ts.createIntializedObject("movement.ExternalMovement");
+			ts.createIntializedObject("io.github.akiranen.movement.ExternalMovement");
 
 		TestUtils utils = new TestUtils(null, null, ts);
 		h1 = utils.createHost(emProto, "h1");

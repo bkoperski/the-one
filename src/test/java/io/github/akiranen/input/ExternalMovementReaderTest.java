@@ -57,7 +57,7 @@ public class ExternalMovementReaderTest {
         for (int i = 0; i < times.length; i++) {
             list = r.readNextMovements();
             checkTuples(list, ids, coords[i]);
-            assertEquals(times[i], r.getLastTimeStamp());
+            assertEquals(times[i], r.getLastTimeStamp(), 0.001);
         }
 
         list = r.readNextMovements();

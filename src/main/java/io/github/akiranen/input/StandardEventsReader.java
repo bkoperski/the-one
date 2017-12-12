@@ -9,6 +9,7 @@ import io.github.akiranen.core.SimError;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -87,6 +88,7 @@ public class StandardEventsReader implements ExternalEventsReader {
 		}
 		while (eventsRead < nrof && line != null) {
 			Scanner lineScan = new Scanner(line);
+			Locale.setDefault(Locale.US);
 			if (skipPattern.matcher(line).matches()) {
 				// skip empty and comment lines
 				try {

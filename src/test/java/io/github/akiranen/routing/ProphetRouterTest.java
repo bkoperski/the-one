@@ -5,6 +5,7 @@
 package io.github.akiranen.routing;
 
 import io.github.akiranen.core.Message;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -18,7 +19,7 @@ public class ProphetRouterTest extends AbstractRouterTest {
 
 	private static int SECONDS_IN_TIME_UNIT = 60;
 
-	@Override
+	@Before
 	public void setUp() {
 		ts.setNameSpace(null);
 		ts.putSetting(MessageRouter.B_SIZE_S, ""+BUFFER_SIZE);
@@ -52,8 +53,8 @@ public class ProphetRouterTest extends AbstractRouterTest {
 		checkCreates(6);
 
 		h4.connect(h5);
-		assertEquals(ProphetRouter.P_INIT, r4.getPredFor(h5));
-		assertEquals(ProphetRouter.P_INIT, r5.getPredFor(h4));
+		assertEquals(ProphetRouter.P_INIT, r4.getPredFor(h5), 0.001);
+		assertEquals(ProphetRouter.P_INIT, r5.getPredFor(h4), 0.001);
 
 		updateAllNodes();
 		// h4 has message for h1 but it shouldn't forward it to h5 since
@@ -138,22 +139,22 @@ public class ProphetRouterTest extends AbstractRouterTest {
 		ProphetRouter r5 = (ProphetRouter)h5.getRouter();
 
 		h4.connect(h5);
-		assertEquals(ProphetRouter.P_INIT, r4.getPredFor(h5));
-		assertEquals(ProphetRouter.P_INIT, r5.getPredFor(h4));
+		assertEquals(ProphetRouter.P_INIT, r4.getPredFor(h5), 0.001);
+		assertEquals(ProphetRouter.P_INIT, r5.getPredFor(h4), 0.001);
 
 		disconnect(h5);
 
 		clock.advance(SECONDS_IN_TIME_UNIT * 2);
 		double newPred = ProphetRouter.P_INIT * Math.pow(ProphetRouter.GAMMA,2);
 
-		assertEquals(newPred, r4.getPredFor(h5));
-		assertEquals(newPred, r5.getPredFor(h4));
+		assertEquals(newPred, r4.getPredFor(h5), 0.001);
+		assertEquals(newPred, r5.getPredFor(h4), 0.001);
 
 		clock.advance(SECONDS_IN_TIME_UNIT / 10);
 		newPred = newPred *	Math.pow(ProphetRouter.GAMMA, 1.0/10);
 
-		assertEquals(newPred, r4.getPredFor(h5));
-		assertEquals(newPred, r5.getPredFor(h4));
+		assertEquals(newPred, r4.getPredFor(h5), 0.001);
+		assertEquals(newPred, r5.getPredFor(h4), 0.001);
 	}
 
 }

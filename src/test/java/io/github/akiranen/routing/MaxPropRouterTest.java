@@ -55,54 +55,54 @@ public class MaxPropRouterTest extends AbstractRouterTest {
 		checkCreates(4);
 
 		/* there should be no routes before connects */
-		assertEquals(INVALID_COST, r1.getCost(h1, h2));
-		assertEquals(INVALID_COST, r2.getCost(h2, h1));
+		assertEquals(INVALID_COST, r1.getCost(h1, h2), 0.001);
+		assertEquals(INVALID_COST, r2.getCost(h2, h1), 0.001);
 
 		h1.connect(h2);
-		assertEquals(0.0, r1.getCost(h1, h2)); // zero cost route to only known
-		assertEquals(0.0, r2.getCost(h2, h1));
+		assertEquals(0.0, r1.getCost(h1, h2), 0.001); // zero cost route to only known
+		assertEquals(0.0, r2.getCost(h2, h1), 0.001);
 
 		disconnect(h1); // disconnect should not affect the costs
-		assertEquals(0.0, r1.getCost(h1, h2));
-		assertEquals(0.0, r2.getCost(h2, h1));
+		assertEquals(0.0, r1.getCost(h1, h2), 0.001);
+		assertEquals(0.0, r2.getCost(h2, h1), 0.001);
 
 		h1.connect(h2); // costs should stay the same (only 1 known host)
-		assertEquals(0.0, r1.getCost(h1, h2));
-		assertEquals(0.0, r2.getCost(h2, h1));
+		assertEquals(0.0, r1.getCost(h1, h2), 0.001);
+		assertEquals(0.0, r2.getCost(h2, h1), 0.001);
 
 		disconnect(h1);
 		h1.connect(h3);
-		assertEquals(0.5, r1.getCost(h1, h2));
-		assertEquals(0.5, r1.getCost(h1, h3));
-		assertEquals(0.0, r2.getCost(h2, h1)); // h2's costs should not change
+		assertEquals(0.5, r1.getCost(h1, h2), 0.001);
+		assertEquals(0.5, r1.getCost(h1, h3), 0.001);
+		assertEquals(0.0, r2.getCost(h2, h1), 0.001); // h2's costs should not change
 
 		disconnect(h1);
 		h1.connect(h3);
 		/* h1's prob of meeting h2 is 0.5/2 -> cost 1-0.5/2 */
-		assertEquals( 1 - 0.5/2 , r1.getCost(h1, h2));
-		assertEquals( 1 - (1+0.5)/2 , r1.getCost(h1, h3));
+		assertEquals( 1 - 0.5/2 , r1.getCost(h1, h2), 0.001);
+		assertEquals( 1 - (1+0.5)/2 , r1.getCost(h1, h3), 0.001);
 
 		disconnect(h1);
 		h1.connect(h3);
-		assertEquals( 1 - (0.5/2)/2 , r1.getCost(h1, h2));
-		assertEquals( 1 - (1+(1+0.5)/2)/2 , r1.getCost(h1, h3));
+		assertEquals( 1 - (0.5/2)/2 , r1.getCost(h1, h2), 0.001);
+		assertEquals( 1 - (1+(1+0.5)/2)/2 , r1.getCost(h1, h3), 0.001);
 		/* probabilities sum to 1.0 */
-		assertEquals(1.0, (1-r1.getCost(h1, h2)) + (1-r1.getCost(h1, h3)));
+		assertEquals(1.0, (1-r1.getCost(h1, h2)) + (1-r1.getCost(h1, h3)), 0.001);
 
 		h1.connect(h4);
-		assertEquals( 1 - ((0.5/2)/2)/2 , r1.getCost(h1, h2));
-		assertEquals( 1 - ((1+(1+0.5)/2)/2)/2 , r1.getCost(h1, h3));
-		assertEquals( 1 - 0.5 , r1.getCost(h1, h4));
+		assertEquals( 1 - ((0.5/2)/2)/2 , r1.getCost(h1, h2), 0.001);
+		assertEquals( 1 - ((1+(1+0.5)/2)/2)/2 , r1.getCost(h1, h3), 0.001);
+		assertEquals( 1 - 0.5 , r1.getCost(h1, h4), 0.001);
 		assertEquals(1.0, (1-r1.getCost(h1, h2)) + (1-r1.getCost(h1, h3)) +
-				(1-r1.getCost(h1, h4)));
+				(1-r1.getCost(h1, h4)), 0.001);
 
 		disconnect(h1);
 		h1.connect(h2); // reconnect to h2
-		assertEquals( 1 - (1 + ((0.5/2)/2)/2)/2 , r1.getCost(h1, h2));
-		assertEquals( 1 - (((1+(1+0.5)/2)/2)/2)/2 , r1.getCost(h1, h3));
-		assertEquals( 1 - 0.5/2 , r1.getCost(h1, h4));
+		assertEquals( 1 - (1 + ((0.5/2)/2)/2)/2 , r1.getCost(h1, h2), 0.001);
+		assertEquals( 1 - (((1+(1+0.5)/2)/2)/2)/2 , r1.getCost(h1, h3), 0.001);
+		assertEquals( 1 - 0.5/2 , r1.getCost(h1, h4), 0.001);
 		assertEquals(1.0, (1-r1.getCost(h1, h2)) + (1-r1.getCost(h1, h3)) +
-				(1-r1.getCost(h1, h4)));
+				(1-r1.getCost(h1, h4)), 0.001);
 
 	}
 
@@ -236,7 +236,7 @@ public class MaxPropRouterTest extends AbstractRouterTest {
 		/* msg with path h1 -> h2     -> h3       -> h4       -> h5  */
 		double trueCost = (1-0.5) + (1-0.0625) + (1-0.25) + (1-0.125);
 		double calcCost = r1.getCost(h1, h5);
-		assertEquals(trueCost, calcCost);
+		assertEquals(trueCost, calcCost, 0.001);
 	}
 
 	/**
@@ -271,8 +271,8 @@ public class MaxPropRouterTest extends AbstractRouterTest {
 		 * h1': h2:1.0; h2:h2'
 		 * h2': h1:1.0; h1:h1' */
 
-		assertEquals(0.0, r1.getCost(h1, h2));
-		assertEquals(0.0, r1.getCost(h2, h1));
+		assertEquals(0.0, r1.getCost(h1, h2), 0.001);
+		assertEquals(0.0, r1.getCost(h2, h1), 0.001);
 
 		clock.advance(1.0);
 		h1.connect(h3);
@@ -280,10 +280,11 @@ public class MaxPropRouterTest extends AbstractRouterTest {
 		/* h1'': h2:0.5, h3:0.5; h2:h2', h3:h3'
 		 * h3': h1:1.0; h1:h1'', h2:h2' */
 
-		assertEquals(0.5, r1.getCost(h1, h2));
+		assertEquals(0.5, r1.getCost(h1, h2), 0.001);
 		/* h3 received h1's other probs properly? */
-		assertEquals(0.5, r3.getCost(h1, h2));
-		assertEquals(0.5, r3.getCost(h1, h3));
+		assertEquals(0.5, r3.getCost(h1, h2), 0.001);
+		assertEquals(0.5, r3.getCost(h1, h3), 0.001);
+
 
 		clock.advance(1.0);
 		h1.connect(h4);
@@ -291,8 +292,8 @@ public class MaxPropRouterTest extends AbstractRouterTest {
 		/* h1''': h2:0.25, h3:0.25, h4:0.5; h2:h2', h3:h3', h4:h4'
 		 * h4': h1:1.0; h1:h1''', h2:h2', h3:h3'*/
 
-		assertEquals(0.75, r4.getCost(h1, h3));
-		assertEquals(0.5, r4.getCost(h1, h4));
+		assertEquals(0.75, r4.getCost(h1, h3), 0.001);
+		assertEquals(0.5, r4.getCost(h1, h4), 0.001);
 
 		clock.advance(1.0);
 		h2.connect(h3);
@@ -300,8 +301,8 @@ public class MaxPropRouterTest extends AbstractRouterTest {
 		/* h2'': h1:0.5, h3:0.5; h1:h1'', h3:h3'' (both from h3)
 		 * h3'': h1:0.5,  h2:0.5; h1:h1'', h2:h2'' (h1's probs should remain) */
 
-		assertEquals(0.5, r2.getCost(h1, h2)); // test the received h1''
-		assertEquals(0.5, r3.getCost(h1, h2)); // is h1'' also still in h3?
+		assertEquals(0.5, r2.getCost(h1, h2), 0.001); // test the received h1''
+		assertEquals(0.5, r3.getCost(h1, h2), 0.001); // is h1'' also still in h3?
 
 		clock.advance(1.0);
 		h1.connect(h2);
@@ -310,6 +311,6 @@ public class MaxPropRouterTest extends AbstractRouterTest {
 		 * h2''': h1:0.75, h3:0.25; h1:h1'''', h2:h3'', h4:h4' */
 
 		/* msg path h2->h1->h4 */
-		assertEquals((1-0.75)+(1-0.25), r2.getCost(h2, h4));
+		assertEquals((1-0.75)+(1-0.25), r2.getCost(h2, h4), 0.001);
 	}
 }

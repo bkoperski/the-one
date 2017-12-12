@@ -77,20 +77,19 @@ public class ExternalEventsQueueTest {
 		assertTrue(tmpBinFile.delete()); // make sure all locks are gone
 	}
 
-	@Test
 	private void checkEeq(ExternalEventsQueue eeq, int preloadVal) {
 		ExternalEvent ee;
-		assertEquals(msgTimes[0],eeq.nextEventsTime());
+		assertEquals(msgTimes[0],eeq.nextEventsTime(), 0.001);
 		assertEquals(preloadVal, eeq.eventsLeftInBuffer());
 
 		ee = eeq.nextEvent();
 		assertTrue(ee instanceof MessageCreateEvent);
 
 		for (int i=1; i < msgTimes.length; i++) {
-			assertEquals(msgTimes[i], eeq.nextEventsTime());
+			assertEquals(msgTimes[i], eeq.nextEventsTime(), 0.001);
 			ee = eeq.nextEvent();
 			assertTrue(ee instanceof ExternalEvent);
-			assertEquals(msgTimes[i], ee.getTime());
+			assertEquals(msgTimes[i], ee.getTime(), 0.001);
 		}
 	}
 }

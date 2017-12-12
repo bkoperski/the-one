@@ -24,6 +24,8 @@ public class WKTReader {
 	public static final String MULTILINESTRING = "MULTILINESTRING";
 	/** known WKT type POINT */
 	public static final String POINT = "POINT";
+	public static final int COORD_X = 0;
+	public static final int COORD_Y = 1;
 
 	/** are all lines of the file read */
 	private boolean done;
@@ -191,15 +193,14 @@ public class WKTReader {
 	 * @throws IOException if couldn't parse coordinate values
 	 */
 	protected Coord parsePoint() throws IOException {
-		String coords = readNestedContents(reader);
-		Scanner s = new Scanner(coords);
+		String[] coords = readNestedContents(reader).split(" ");
 		double x,y;
 
 		try {
-			x = s.nextDouble();
-			y = s.nextDouble();
+			x = Double.parseDouble(coords[COORD_X]);
+			y = Double.parseDouble(coords[COORD_Y]);
 		} catch (RuntimeException e) {
-			throw new IOException("Bad coordinate values: '" + coords + "'");
+			throw new IOException("Bad coordinate values: '" + coords + "'", e);
 		}
 
 		return new Coord(x,y);

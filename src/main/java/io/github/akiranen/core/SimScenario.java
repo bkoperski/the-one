@@ -71,15 +71,15 @@ public class SimScenario implements Serializable {
 	public static final String GAPPNAME_S = "application";
 
 	/** package where to look for movement models */
-	private static final String MM_PACKAGE = "movement.";
+	private static final String MM_PACKAGE = "io.github.akiranen.movement.";
 	/** package where to look for router classes */
-	private static final String ROUTING_PACKAGE = "routing.";
+	private static final String ROUTING_PACKAGE = "io.github.akiranen.routing.";
 
 	/** package where to look for interface classes */
-	private static final String INTTYPE_PACKAGE = "interfaces.";
+	private static final String INTTYPE_PACKAGE = "io.github.akiranen.interfaces.";
 
 	/** package where to look for application classes */
-	private static final String APP_PACKAGE = "applications.";
+	private static final String APP_PACKAGE = "io.github.akiranen.applications.";
 
 	/** The world instance */
 	private World world;

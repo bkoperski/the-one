@@ -22,3 +22,6 @@ doc/package-list
 
 # Gradle files
 gradle
+.gradle
+build
+out
